@@ -8,7 +8,7 @@ WHITE = (255, 255, 255)
 def main():
 
     pg.init()
-    logo = pg.image.load("lib/logo2.png")
+    logo = pg.image.load("lib/logo.png")
     pg.display.set_icon(logo)
     pg.display.set_caption("minimum program")
 
@@ -25,12 +25,14 @@ screen.fill(WHITE)
 
 
 class Palette:
+    ''''''
+
     def __init__(self, colors: list):
         self.colors = colors
-        self.color_numer = len(colors)
+        self.color_list_len = len(colors)
 
     def get_rand_color(self):
-        return self.colors[random.randint(0, self.color_numer - 1)]
+        return self.colors[random.randint(0, self.color_list_len - 1)]
 
     def get_weight_color(self):
         pass
